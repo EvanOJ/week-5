@@ -157,32 +157,19 @@ $(document).ready(function() {
   $('#text-label1').text('Description');
   $('#text-label2').text('Latitude');
   $('#text-label3').text('Longitude');
-  $('#number-label').text('Marker Radius');
-  $('#checkbox-label1').text('Fill Circles');
-  $('#checkbox-label2').text('checkbox-2');
+  $('#number-label').text('Marker Number');
+  $('#checkbox-label1').text('New checkbox 1');
+  $('#checkbox-label2').text('New checkbox 2');
   $('#color-label').text('New color');
 
 
   //2 change input values
 
-  //description
-  $('#text-input1').val('');
-  $('#text-input1')[0].placeholder='Enter A Description' ;
-
-  //change input to number -->Latitude
+  $('#text-input1').val('new value 1');
   $('#text-input2')[0].type = "number";
-  $('#text-input2').val('39.95');
-  $('#text-input2')[0].placeholder='39.95';
-
-  //change input to number -->Longitude
-  $('#text-input3')[0].type = "number";
-  $('#text-input3').val('-75.16');
-  $('#text-input3')[0].placeholder='-75.16';
-
-
-  $('#numeric-input').val('100');
-  $('#numeric-input')[0].placeholder= "100";
-
+  $('#text-input2').val('0000');
+  $('#text-input3').val('new value 3');
+  $('#numeric-input').val('0000');
   $('#cbox-input1').prop('checked',true);
   $('#cbox-input2').prop('checked',true);
   $('#color-input').val('#ff0000');
@@ -203,17 +190,19 @@ $(document).ready(function() {
   // };
 
 
-  //4 enable fields in form
-  $('#text-input1').prop('disabled', false);
-  $('#text-input2').prop('disabled', false);
-  $('#text-input3').prop('disabled', false);
-  $('#numeric-input').prop('disabled', false);
-  $('#cbox-input1').prop('disabled', false);
-  $('#cbox-input2').prop('disabled', true);
+  //4 enable all fields in form
+  // $('#text-input1').prop('disabled', false);
+  // $('#text-input2').prop('disabled', false);
+  // $('#text-input3').prop('disabled', false);
+  // $('#numeric-input').prop('disabled', false);
+  // $('#cbox-input1').prop('disabled', false);
+  // $('#cbox-input2').prop('disabled', false);
 
   // ^this OR   this:
 
-  // $('*').prop('disabled',false);
+$('*').prop('disabled',false);
+
+
 
   //5 click log user inputs
 
@@ -228,19 +217,13 @@ $(document).ready(function() {
       colorInput:$('#color-input').val()
     };
     console.log(userInputs);
-
-    var circle = L.circle([userInputs.textInput2, userInputs.textInput3], userInputs.numericInput, {
-      color: 'blue',
-      fill: userInputs.cboxInput1,
-      fillColor: userInputs.colorInput,
-      fillOpacity: 0.5
-    }).addTo(map).bindPopup(userInputs.textInput1 + "Lat " + userInputs.textInput2 + "  " + "Long " + userInputs.textInput3);
-
-
-  $('button#clearButton1').click(function(x) {
-    map.removeLayer(circle);
-    });
-
   });
+
+  //6=======================================================
+  // didnt want to erase work done previousl 1-5 so step6 and below
+  // has a lot of repeats and overrides.
+
+
+
 
 });

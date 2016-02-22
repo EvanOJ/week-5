@@ -12,6 +12,37 @@
       <!-- =====================
       Add elements in this space
       ====================== -->
+
+    <!-- INPUTS =================================== -->
+    <h3>
+    <label id="inputURL" for="input-URL">Data Source URL</label>
+    </h3>
+    <input id="input-URL" class="input-text" type="text" placeholder="https://raw.githubusercontent.com/CPLN690-MUSA610/datasets/master/json/philadelphia-solar-installations.json" value="https://raw.githubusercontent.com/CPLN690-MUSA610/datasets/master/json/philadelphia-solar-installations.json" disabled>
+    <br>
+    <h3>
+    <label id="Latitude" for="input-Latitude">Latitude </label>
+    </h3>
+    <input id="input-Latitude" class="input-number" type="number" placeholder="39.95" value="39.95" disabled>
+    <br>
+    <h3>
+    <label id="Longitude" for="input-Longitude">Longitude </label>
+    </h3>
+    <input id="input-Longitude" class="input-number" type="number" placeholder="-75.16" value="-75.16" disabled>
+    <br>
+    <h3>
+    <label id="radius" for="input-radius">Search Radius(km) </label>
+    </h3>
+    <input id="input-radius" class="input-number" type="number" placeholder="1" value="1" disabled>
+    <br>
+
+        <!-- TRIGGERS =================================== -->
+    <h3>
+    <button id="submit-button">Go!</button>
+    <button id="clear-button">Clear!</button>
+    </h3>
+
+
+
     </div>
     <!-- Map -->
     <div id="map" class="map"></div>
